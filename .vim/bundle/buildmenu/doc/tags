@@ -1,0 +1,16 @@
+:BuildmenuClose	buildmenu.txt	/*:BuildmenuClose*
+:BuildmenuOpen	buildmenu.txt	/*:BuildmenuOpen*
+:BuildmenuToggle	buildmenu.txt	/*:BuildmenuToggle*
+Buildmenu-commands	buildmenu.txt	/*Buildmenu-commands*
+Buildmenu-intro	buildmenu.txt	/*Buildmenu-intro*
+Buildmenu-mappings	buildmenu.txt	/*Buildmenu-mappings*
+Buildmenu-settings	buildmenu.txt	/*Buildmenu-settings*
+Buildmenu-setup	buildmenu.txt	/*Buildmenu-setup*
+Buildmenu-usage	buildmenu.txt	/*Buildmenu-usage*
+Buildmenu-waf	buildmenu.txt	/*Buildmenu-waf*
+BuildmenuGetTargetListCmd	buildmenu.txt	/*BuildmenuGetTargetListCmd*
+BuildmenuMaxWidth	buildmenu.txt	/*BuildmenuMaxWidth*
+BuildmenuMinWidth	buildmenu.txt	/*BuildmenuMinWidth*
+BuildmenuShowBuildCmdPreview	buildmenu.txt	/*BuildmenuShowBuildCmdPreview*
+buildmenu.txt	buildmenu.txt	/*buildmenu.txt*
+loaded_buildmenu	buildmenu.txt	/*loaded_buildmenu*

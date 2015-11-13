@@ -1,0 +1,25 @@
+[ui]
+username=Michael Krason <Michael.Krason@jhuapl.edu>
+
+[extensions]
+color=
+pager=
+graphlog=
+mq=
+#progress=
+purge=
+rebase=
+record=
+
+[alias]
+qstatus = status --rev qtip^:qtip
+
+[defaults]
+log = --style compact -v
+
+[pager]
+attend=log,diff,cat,annotate,help
+
+[hooks]
+pre-push = python tools/pre-commit-check --do-not-configure --do-not-clean
+
