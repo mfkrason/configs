@@ -213,9 +213,18 @@ set tags+=tags
 set path+=src
 
 noremap <leader>n :cnext<cr>
-noremap <leader>b :Make<cr>
+noremap <leader>b :Make install<cr>
 noremap <leader>a :let @a=expand("%:.")<cr>
+noremap <leader>c :cclose <cr>
+noremap <leader>l :lopen <cr>
+
+au BufEnter *.machine :set filetype=yaml
+au BufEnter *.machine :set sw=2
+au BufEnter *.machine :set expandtab
 
 "let &colorcolumn=join(range(100,999),",")
 "highlight ColorColumn ctermbg=234
+
+set shell=bash\ --login
+
 
