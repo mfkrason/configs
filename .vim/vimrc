@@ -41,9 +41,9 @@ set showtabline=2
 set cmdheight=2
 set title
 set t_Co=256
-set background=dark
+set background=light
 syntax on
-set noerrorbells
+set noeb t_vb=
 set shortmess=atI
 set number
 set nowrap
@@ -57,7 +57,7 @@ set hidden
 set switchbuf=useopen
 set autoread
 
-set winwidth=80
+" set winwidth=80
 
 set splitbelow splitright
 
@@ -109,15 +109,13 @@ syntax on
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 
-colorscheme zendnb
+colorscheme candy
 " gui
 if has('gui_running')
 	set guicursor+=a:blinkon0
 	set vb t_vb=
 
-	colorscheme anokha
-
-	set guifont=Ubuntu\ Mono\ Bold:h15
+	colorscheme candy
 endif
 
 noremap <F4> :A<CR>
@@ -218,9 +216,9 @@ noremap <leader>a :let @a=expand("%:.")<cr>
 noremap <leader>c :cclose <cr>
 noremap <leader>l :lopen <cr>
 
-au BufEnter *.machine :set filetype=yaml
-au BufEnter *.machine :set sw=2
-au BufEnter *.machine :set expandtab
+au BufEnter *.machine :setlocal filetype=yaml
+au BufEnter *.machine :setlocal sw=2
+au BufEnter *.machine :setlocal expandtab
 
 "let &colorcolumn=join(range(100,999),",")
 "highlight ColorColumn ctermbg=234

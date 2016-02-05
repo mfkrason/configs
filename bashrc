@@ -39,7 +39,7 @@ function generate_waf_project()
 function setup_ember()
 {
 	PRE_EMBER=$PATH
-	source /opt/ember-toolchain-0.1.13/environment.sh
+	source /opt/ember-toolchain-0.1.14/environment.sh
 	PE_LIST=$(echo $PRE_EMBER | sed "s/:/ /g")
 	PO_LIST=$(echo $PATH | sed "s/:/ /g")
 	#comm -23 <(echo $PE_LIST | sort) <(echo $PO_LIST | sort )
@@ -47,22 +47,24 @@ function setup_ember()
 
 export PROMPT_COMMAND=__prompt_command
 
-export CC=clang
-export CXX=clang++
-
 
 alias grep='grep --color=always'
 alias ls='ls --color=always'
-
-source /opt/linuxbrew/environment.sh
-setup_ember
 
 if [[ -d $(brew --prefix)/etc/bash_completion.d ]]; then
 	echo 'brew'
 	source $(brew --prefix)/etc/bash_completion.d/*
 fi
 
+source /opt/linuxbrew/environment.sh
+setup_ember
+
 if [[ -f /etc/bash_completion ]]; then
 	. /etc/bash_completion
 fi
+
+export CC=clang
+export CXX=clang++
+export CCACHE_DIR=/opt/ccache/
+
 

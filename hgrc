@@ -18,8 +18,8 @@ qstatus = status --rev qtip^:qtip
 log = --style compact -v
 
 [pager]
-attend=log,diff,cat,annotate,help,qdiff
+attend=log,diff,cat,annotate,help,qdiff,glog
 
 [hooks]
-pre-push = python tools/pre-commit-check --do-not-configure --do-not-clean
+pre-push = test $(hg status -amr | wc -l) -eq 0 && python tools/pre-commit-check --do-not-configure --do-not-clean
 
