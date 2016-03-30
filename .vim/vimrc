@@ -4,6 +4,7 @@ set nocompatible
 
 set makeprg=./waf
 
+filetype plugin on
 execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on
@@ -108,6 +109,10 @@ syntax on
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_custom_ignore = {
+	\ 'dir': '\v[\/]\.(git|hg|svn)$',
+	\ 'file': '\v\.(exe|so|dll|o)$',
+	\ }
 
 colorscheme candy
 " gui
@@ -203,10 +208,10 @@ endfunction
 
 
 " Tag files
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/boost
-set tags+=~/.vim/tags/qt4
-set tags+=~/.vim/tags/python
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/boost
+"set tags+=~/.vim/tags/qt4
+"set tags+=~/.vim/tags/python
 set tags+=tags
 set path+=src
 
